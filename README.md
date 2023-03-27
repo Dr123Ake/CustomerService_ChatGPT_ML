@@ -60,11 +60,19 @@ OpenAI charges based on tokens, so to minimize the cost of deveopment for this p
 
 2. Create your own testing data and save it as ```processed/data.csv``` using the same structure as of ```processed/scraped.csv```. 
 
+![Screenshot 2023-03-16 014014](https://user-images.githubusercontent.com/54694766/228060450-1c657372-08d7-41cf-b304-af291a6101e4.png)
+
+<img width="188" alt="image" src="https://user-images.githubusercontent.com/54694766/228059942-d5662acf-14f2-4a91-8772-0bc83d7667ac.png">
+
 3. Modify the code in ```embedText.py``` to read csv file ```processed/data.csv``` instead of ```processed/scraped.csv```.
+
+<img width="501" alt="image" src="https://user-images.githubusercontent.com/54694766/228060086-213d5f85-beed-4afc-aabf-605ad3b2d60a.png">
 
 4. Run ```$ python3 embedText.py``` to embed the data.
 
 5. Run ```$ flask run``` to test the project by asking questions about the testing data in browser. 
+
+<img width="481" alt="Screenshot 2023-03-19 211449" src="https://user-images.githubusercontent.com/54694766/228060541-47a04fdb-185f-474f-9de5-4954b2c27f6c.png">
 
 6. Once the project is working as desired, link your payment method on OpenAI and embed ```processed/scraped.csv``` then test project with ```$ flask run```.
 
