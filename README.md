@@ -1,7 +1,7 @@
-# ML - Create a Customer Support Website with ChatGPT models
+# **ML - Create a Customer Support Website with ChatGPT models**
 [Google Slides](https://docs.google.com/presentation/d/110wkdPLv1HxS2wEj5NBrm1Br9f2UYO70l4Yxp-dtXrE/edit?usp=sharing)
 
-## Introduction
+## **Introduction**
 
 This project is to use the popular ChatGPT models to create a customer support website to answer questions from customers about their website.
 
@@ -27,32 +27,54 @@ It includes the following improvements:
 * It can handle more complex instructions, meaning you can get even more creative with how you make use of its capabilities now.
 * It’s better at longer form content generation, allowing you to take on tasks that would have previously been too difficult to achieve.
 
-## Design
+<br>
+
+## **Design**
 
 <img width="496" alt="Screenshot 2023-03-26 005936" src="https://user-images.githubusercontent.com/54694766/227764799-f2d1bac3-819e-4ca6-ab60-974a1a9c1f6b.png">
 
-1. Install Packages
+1. **Install Packages**
 
    Set up environment with installing all the packages needed in the requirements.txt file. 
 
-2. Crawl Data
+2. **Crawl Data**
 
    Crawl data from the website and save the data as a .csv file for use later. 
 
-3. Embedded Text
+3. **Embedded Text**
 
    Use the text-embedding-ada-002
    Model to embedded the relevant data from the .csv file. 
 
-4. Display
+4. **Display**
 
    Run the project with displaying the customer UI and collect questions.
 
-## Implementation and Test
+**Tips on Saving Money for Developing**
+
+OpenAI charges based on tokens, so to minimize the cost of deveopment for this project, I used a small size of data while developing to make the use of the grant given by the platform.
+
+1. Run ```$ python3 crawaldata.py``` to make sure data crawling works
+
+2. Create your own testing data and save it as ```processed/data.csv``` using the same structure as of ```processed/scraped.csv```. 
+
+3. Modify the code in ```embedText.py``` to read csv file ```processed/data.csv``` instead of ```processed/scraped.csv```.
+
+4. Run ```$ python3 embedText.py``` to embed the data.
+
+5. Run ```$ flask run``` to test the project by asking questions about the testing data in browser. 
+
+6. Once the project is working as desired, link your payment method on OpenAI and embed ```processed/scraped.csv``` then test project with ```$ flask run```.
+
+<br>
+
+## **Implementation and Test**
 
 *This project is run on Ubuntu 22.04*
 
 <img width="463" alt="Screenshot 2023-03-26 005018" src="https://user-images.githubusercontent.com/54694766/227764855-96251b57-d0ad-4968-b3cc-092afa7771d4.png">
+
+<br>
 
 1. **Create Python Virtual Environment and install Packages**
 
@@ -74,6 +96,7 @@ It includes the following improvements:
    $ pip3 install –upgrade pip setuptools or 
    $ pip install --upgrade setuptools --user python
    ```
+<br>
 
 2. **Crawl Data**
 
@@ -82,6 +105,8 @@ It includes the following improvements:
    ```
    
    <img width="767" alt="Screenshot 2023-03-25 234136" src="https://user-images.githubusercontent.com/54694766/227764999-fb54131a-bad6-4ed5-8e96-a33a091ebe07.png">
+
+<br>
 
 3. **Embedded Text**
    ```
@@ -97,6 +122,8 @@ It includes the following improvements:
 
    <img width="489" alt="Screenshot 2023-03-25 220826" src="https://user-images.githubusercontent.com/54694766/227764976-84454963-3e2b-4455-b39f-2d96e55b0688.png">
 
+
+<br>
 
 4. **Display**
 
@@ -118,8 +145,9 @@ It includes the following improvements:
 
    <img width="363" alt="Screenshot 2023-03-25 221754" src="https://user-images.githubusercontent.com/54694766/227764935-12b2d24e-be85-4813-8ebe-d551db49661f.png">
 
+<br>
 
-## Conclusion
+## **Conclusion**
 
 **Accuracy**
 
@@ -136,8 +164,15 @@ Use the real data only when the whole project go through as desired.
 
 <img width="529" alt="Screenshot 2023-03-26 003555" src="https://user-images.githubusercontent.com/54694766/227764890-c2dc08aa-38f7-44e0-8be4-801e77c71ae2.png">
 
+<br>
 
-## Enhancesment
+## **Enhancesment**
 
 * Improve UI
 * Implementate more APIs for customer services
+
+<br>
+
+## **References**
+* https://platform.openai.com/docs/guides/embeddings/what-are-embeddings 
+* https://help.openai.com/en/articles/6779149-how-do-text-davinci-002-and-text-davinci-003-differ  
