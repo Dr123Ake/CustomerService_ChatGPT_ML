@@ -50,7 +50,9 @@ It includes the following improvements:
 
    Run the project with displaying the customer UI and collect questions.
 
-**Tips on Saving Money for Developing**
+<br>
+
+### **Tips on Saving Money for Developing**
 
 OpenAI charges based on tokens, so to minimize the cost of deveopment for this project, I used a small size of data while developing to make the use of the grant given by the platform.
 
