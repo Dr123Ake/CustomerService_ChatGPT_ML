@@ -176,7 +176,7 @@ Use the real data only when the whole project go through as desired.
 
 <br>
 
-## **Enhancesment**
+## **Enhancement**
 
 * Improve UI
 * Implementate more APIs for customer services
